@@ -146,8 +146,7 @@ setopt no_flow_control
 bindkey "\e[Z" reverse-menu-complete
 
 # docker command の補完
-#fpath=(~/dotfiles/zsh/completion) $fpath
-
+fpath=(~/.zsh/completion $fpath)
 
 ###########################################################
 # GCP関連
