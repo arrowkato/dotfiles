@@ -1,0 +1,2 @@
+# .zsh_profileには端末固有の設定を書くので、管理対象から外す
+.zsh_profile
