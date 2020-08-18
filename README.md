@@ -13,6 +13,34 @@ ln -s ~/dotfiles/zsh/completion/_docker-compose ~/.zsh/completion/_docker-compos
 
 # vim 
 
+
+スワップファイル,バックアップファイル,undoファイルの配置場所を指定
+```zsh
+mkdir -p ~/.vim/swap
+mkdir -p ~/.vim/backup
+mkdir -p ~/.vim/undo
+```
+
+.vimrc, gvimrcにシンボリックリンクを貼る
+```zsh
+ln -s ~/dotfiles/vim/.gvimrc ~/.gvimrc
+ln -s ~/dotfiles/vim/.vimrc ~/.vimrc
+```
+
+dein.vim
+```zsh
+mkdir -p ~/.cache/dein 
+cd ~/.cache/dein
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+sh ./installer.sh ~/.vim/tmp/dein
+
+brew install yarn
+mkdir -p ~/.vim/rc
+ln -s ~/dotfiles/vim/rc/dein.toml  ~/.vim/rc/dein.toml 
+ln -s ~/dotfiles/vim/rc/dein_lazy.toml  ~/.vim/rc/dein_lazy.toml 
+/dein_lazy.toml
+```
+
 # vscode
 
 # jetbrains

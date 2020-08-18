@@ -1,0 +1,8 @@
+[[plugins]]
+repo = 'vim-jp/vimdoc-ja'
+[[plugins]]
+repo = "tyru/open-browser.vim"
+[[plugins]]
+repo = 'previm/previm'
+[[plugins]]
+repo = 'mattn/vim-maketable'
