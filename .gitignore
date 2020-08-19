@@ -42,3 +42,6 @@ Temporary Items
 .history
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,macos
+
+# vim auto install files
+vim/.vim
