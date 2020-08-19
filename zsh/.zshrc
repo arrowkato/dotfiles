@@ -19,7 +19,7 @@ export LS_COLORS='di=35:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46
 alias ls="ls -GF"
 alias gls="gls --color"
 alias pdf="open -a Preview"
-alias vim="open -a /Applications/MacVim.app"
+alias mvim="open -a /Applications/MacVim.app"
 zstyle ':completion:*' list-colors 'di=36' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
 
 
