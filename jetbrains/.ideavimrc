@@ -1,0 +1,23 @@
+" 行末のスペースを可視化
+set listchars=tab:^\ ,trail:~
+
+" ヤンクでクリップボードにコピー
+noremap "+y "*y
+noremap "+Y "*Y
+noremap "+p "*p
+noremap "+P "*P
+noremap <C-S-c> "*y
+noremap <C-S-v> "*P
+
+" jkhlの移動強化
+noremap <C-j> }
+noremap <C-k> {
+noremap <C-h> 0
+noremap <C-l> $
+
+"タブ移動
+noremap <C-n> gt
+noremap <C-p> gT
+
+" クリップボード共有
+set clipboard=unnamed
