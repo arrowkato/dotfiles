@@ -44,3 +44,8 @@ ln -s ~/dotfiles/vim/rc/dein_lazy.toml  ~/.vim/rc/dein_lazy.toml
 # vscode
 
 # jetbrains
+
+```
+ln -s ~/dotfiles/jetbrains/.ideavimrc  ~/.ideavimrc
+```
+
