@@ -43,6 +43,16 @@ ln -s ~/dotfiles/vim/rc/dein_lazy.toml  ~/.vim/rc/dein_lazy.toml
 
 # vscode
 
+for mac setting
+```zsh
+ln -s ~/dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -s ~/dotfiles/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+```
+If you use windows or linux, use below path.
+* Windows %APPDATA%\Code\User\settings.json
+* Linux $HOME/.config/Code/User/settings.json
+
+
 # jetbrains
 
 ```

@@ -1,0 +1,65 @@
+{
+    // ~/Library/Application Support/Code/User/settings.json にあるファイルに対して補完が効く。
+    // なのでシンボリックリンクを貼った場合は、リンク先のファイルのパスで直接開くと補完が効かない
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "editor.fontSize": 18,
+    "terminal.integrated.fontSize": 18,
+    "workbench.iconTheme": "vscode-icons",
+
+    // --------------------------------------------------------------------
+    // VSCodeVim setting
+    // カーソルは点滅させない
+    "editor.cursorBlinking": "solid",
+    // ヤンクした内容をクリップボードと共有
+    "vim.useSystemClipboard": true,
+    // 検索対象の単語をハイライト
+    "vim.hlsearch": true,
+
+    // normal mode 時のキーバインド変更
+    "vim.normalModeKeyBindings": [
+        // jkhlの移動強化
+        {
+            "before": ["<C-j>"],
+            "after" : ["}"]
+        },
+        {
+            "before": ["<C-k>"],
+            "after" : ["{"]
+        },
+        {
+            "before": ["<C-h>"],
+            "after" : ["0"]
+        },
+        {
+            "before": ["<C-l>"],
+            "after" : ["$"]
+        },
+        // なぜか設定できなかったのでショートカットに直接設定
+        // 設定値は, keybindings.json 参照
+        // workbench.action.nexteditor
+        // workbench.action.previouseditor
+        // {
+        //     "before": ["<C-A-n>"],
+        //     "after" : ["gt"]
+        // },
+        // {
+        //     "before": ["<C-A-p>"],
+        //     "after" : ["gT"]
+        // }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+    ],
+    // insert mode 時のキーバインド変更 
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after" : ["Esc"]
+        },
+    ],
+    
+
+    
+    
+    // vscodevim setting
+    // --------------------------------------------------------------------
+}

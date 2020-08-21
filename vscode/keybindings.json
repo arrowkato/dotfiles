@@ -1,0 +1,41 @@
+// 既定値を上書きするには、このファイル内にキー バインドを挿入します
+[
+    // --------------------------------------------------------------
+    // ホントはsetting.jsonのvimキーバインドで設定したかったシリーズ
+
+    // 右隣のeditorに移動するショートカットを"ctrl + alt + n"のみに設定
+    // デフォルトショートカットを潰す
+    {
+        "key": "shift+cmd+]",
+        "command": "-workbench.action.nextEditor"
+    },
+    // デフォルトショートカットを潰す
+    {
+        "key": "alt+cmd+right",
+        "command": "-workbench.action.nextEditor"
+    },
+    // "ctrl + alt + n"を追加
+    {
+        "key": "ctrl+alt+n",
+        "command": "workbench.action.nextEditor"
+    },
+
+    // 左隣のeditorに移動するショートカットを"ctrl + alt + p"のみに設定
+    // デフォルトショートカットを潰す
+    {
+        "key": "shift+cmd+[",
+        "command": "-workbench.action.previousEditor"
+    },
+    // デフォルトショートカットを潰す
+    {
+        "key": "alt+cmd+left",
+        "command": "-workbench.action.previousEditor"
+    },
+    // "ctrl + alt + p"を追加
+    {
+        "key": "ctrl+alt+p",
+        "command": "workbench.action.previousEditor"
+    }
+    // ホントはsetting.jsonのvimキーバインドで設定したかったシリーズ
+    // --------------------------------------------------------------
+]
