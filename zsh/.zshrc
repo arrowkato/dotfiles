@@ -148,6 +148,14 @@ bindkey "\e[Z" reverse-menu-complete
 # docker command の補完
 fpath=(~/.zsh/completion $fpath)
 
+# pyenv のパスを通す
+# 前提として、下記コマンドが実行されていること
+# git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+
 ###########################################################
 # GCP関連
 ###########################################################
