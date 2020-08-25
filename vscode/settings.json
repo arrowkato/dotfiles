@@ -14,7 +14,6 @@
     "vim.useSystemClipboard": true,
     // 検索対象の単語をハイライト
     "vim.hlsearch": true,
-
     // normal mode 時のキーバインド変更
     "vim.normalModeKeyBindings": [
         // jkhlの移動強化
@@ -56,9 +55,26 @@
             "after" : ["Esc"]
         },
     ],
-    
-
-    
+    // visual mode 時のキーバインド変更
+    "vim.visualModeKeyBindings": [
+        // jkhlの移動強化
+        {
+            "before": ["<C-j>"],
+            "after" : ["}"]
+        },
+        {
+            "before": ["<C-k>"],
+            "after" : ["{"]
+        },
+        {
+            "before": ["<C-h>"],
+            "after" : ["0"]
+        },
+        {
+            "before": ["<C-l>"],
+            "after" : ["$"]
+        },
+    ],
     
     // vscodevim setting
     // --------------------------------------------------------------------
