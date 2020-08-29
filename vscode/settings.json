@@ -5,7 +5,6 @@
     "editor.fontSize": 18,
     "terminal.integrated.fontSize": 18,
     "workbench.iconTheme": "vscode-icons",
-
     // --------------------------------------------------------------------
     // VSCodeVim setting
     // カーソルは点滅させない
@@ -18,20 +17,36 @@
     "vim.normalModeKeyBindings": [
         // jkhlの移動強化
         {
-            "before": ["<C-j>"],
-            "after" : ["}"]
+            "before": [
+                "<C-j>"
+            ],
+            "after": [
+                "}"
+            ]
         },
         {
-            "before": ["<C-k>"],
-            "after" : ["{"]
+            "before": [
+                "<C-k>"
+            ],
+            "after": [
+                "{"
+            ]
         },
         {
-            "before": ["<C-h>"],
-            "after" : ["0"]
+            "before": [
+                "<C-h>"
+            ],
+            "after": [
+                "0"
+            ]
         },
         {
-            "before": ["<C-l>"],
-            "after" : ["$"]
+            "before": [
+                "<C-l>"
+            ],
+            "after": [
+                "$"
+            ]
         },
         // なぜか設定できなかったのでショートカットに直接設定
         // 設定値は, keybindings.json 参照
@@ -46,36 +61,80 @@
         //     "after" : ["gT"]
         // }
     ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-    ],
-    // insert mode 時のキーバインド変更 
+    "vim.normalModeKeyBindingsNonRecursive": [],
+    // insert mode 時のキーバインド変更
     "vim.insertModeKeyBindings": [
         {
-            "before": ["j", "j"],
-            "after" : ["Esc"]
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "Esc"
+            ]
         },
     ],
     // visual mode 時のキーバインド変更
     "vim.visualModeKeyBindings": [
         // jkhlの移動強化
         {
-            "before": ["<C-j>"],
-            "after" : ["}"]
+            "before": [
+                "<C-j>"
+            ],
+            "after": [
+                "}"
+            ]
         },
         {
-            "before": ["<C-k>"],
-            "after" : ["{"]
+            "before": [
+                "<C-k>"
+            ],
+            "after": [
+                "{"
+            ]
         },
         {
-            "before": ["<C-h>"],
-            "after" : ["0"]
+            "before": [
+                "<C-h>"
+            ],
+            "after": [
+                "0"
+            ]
         },
         {
-            "before": ["<C-l>"],
-            "after" : ["$"]
+            "before": [
+                "<C-l>"
+            ],
+            "after": [
+                "$"
+            ]
         },
     ],
-    
     // vscodevim setting
+    // --------------------------------------------------------------------
+    // --------------------------------------------------------------------
+    // general setting
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    // VSCodeからフォーカスが外れたときに自動保存
+    "files.autoSave": "onWindowChange",
+    // 保存時にフォーマッターを適用する
+    "editor.formatOnSave": true,
+    "workbench.list.openMode": "doubleClick",
+    "workbench.editor.enablePreview": true,
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": true,
+    "extensions.autoUpdate": false,
+    // general setting
+    // --------------------------------------------------------------------
+    "[shellscript]": {
+        "editor.detectIndentation": false,
+        "editor.tabSize": 4,
+        "editor.formatOnSave": true,
+    },
+    // --------------------------------------------------------------------
+    // Python setting
+    // 基本的な管理方針として、Pythonの設定は、プロジェクトごとのsetting.jsonに記載する
+    // Python setting
     // --------------------------------------------------------------------
 }
