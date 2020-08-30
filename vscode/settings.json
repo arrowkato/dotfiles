@@ -131,6 +131,11 @@
         "editor.detectIndentation": false,
         "editor.tabSize": 4,
         "editor.formatOnSave": true,
+        "editor.defaultFormatter": "foxundermoon.shell-format",
+    },
+    "[dockerfile]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker",
     },
     // --------------------------------------------------------------------
     // Python setting

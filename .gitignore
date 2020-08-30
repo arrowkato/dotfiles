@@ -45,3 +45,6 @@ Temporary Items
 
 # vim auto install files
 vim/.vim
+
+# Keep the tmp/ directory out of git control
+tmp/
