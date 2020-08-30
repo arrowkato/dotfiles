@@ -10,7 +10,7 @@ disable=SC2086
 ```
 [explanation of SC2086](https://github.com/koalaman/shellcheck/wiki/SC2086)
 
-# how to use .hadolint
+# how to use .hadolint.yaml
 
 Make .hadolint file in project root directory as well as .shellcheckrc.
 
