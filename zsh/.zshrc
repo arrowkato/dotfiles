@@ -1,7 +1,7 @@
 ## Comploetion configuration
 
 autoload -U compinit
-compinit 
+compinit
 
 export PATH=/opt/local/bin:/opt/local/sbin/:/opt/local/include:$PATH:/opt/local/lib/
 export PKG_CONFIG_PATH=/opt/local/lib/pkgconfig/
@@ -37,7 +37,7 @@ PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
 find-grep () { find . -type f -print | xargs grep -n --binary-files=without-match $@ }
 
 
-# プロンプトの設定 
+# プロンプトの設定
 PROMPT='%K{green}%F{black}%~#%f%k '
 
 # ヒストリの設定
@@ -68,7 +68,7 @@ LISTMAX=0
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
 
 # cdのタイミングで自動的にpushd
-setopt auto_pushd 
+setopt auto_pushd
 
 # 複数の zsh を同時に使う時など history ファイルに上書きせず追加
 setopt append_history
@@ -156,6 +156,10 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 
+# starship の有効化
+# https://starship.rs/ja-jp/
+eval "$(starship init zsh)"
+
 ###########################################################
 # GCP関連
 ###########################################################
@@ -172,3 +176,4 @@ export CLOUDSDK_PYTHON=python3
 # aws cliの補完
 autoload bashcompinit && bashcompinit
 complete -C '/usr/local/bin/aws_completer' aws
+
