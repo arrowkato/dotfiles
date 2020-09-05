@@ -156,8 +156,8 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 
-# starship の有効化
-# https://starship.rs/ja-jp/
+# starship の有効化 https://starship.rs/ja-jp/
+# 予め $brew install starship しておく必要あり
 eval "$(starship init zsh)"
 
 ###########################################################
