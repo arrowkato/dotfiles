@@ -1,0 +1,143 @@
+{
+    "title": "自分用の設定",
+    "rules": [
+        {
+            "description": "かなキーで入力をトグルできるようにする for Apple Internal Keyboard and BlueTooth Keyboard",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "description": "入力ソースが英字の場合、ひらがなにする（入力ソースがひらがなの場合、上書きの必要なし）",
+                    "from": {
+                        "key_code": "japanese_kana"
+                    },
+                    "to": [
+                        {
+                            "key_code": "japanese_eisuu"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                    "language": "ja"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "変換キーで入力をトグルできるようにするpart1/2 for USB Keyboard",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "description": "入力ソースが英字の場合、ひらがなにする",
+                    "from": {
+                        "key_code": "international4"
+                    },
+                    "to": [
+                        {
+                            "key_code": "japanese_kana"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "変換キーで入力をトグルできるようにするpart1/2 for USB Keyboard",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "description": "入力ソースが英数場合、ひらがなにする",
+                    "from": {
+                        "key_code": "international4"
+                    },
+                    "to": [
+                        {
+                            "key_code": "japanese_kana"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                    "language": "en"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "変換キーで入力をトグルできるようにするpart2/2 for USB Keyboard",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "description": "入力ソースがひらがなの場合、英数にする",
+                    "from": {
+                        "key_code": "international4"
+                    },
+                    "to": [
+                        {
+                            "key_code": "japanese_eisuu"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "input_source_if",
+                            "input_sources": [
+                                {
+                                    "language": "ja"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "英数 を英数+Escに変更 for Apple Internal Keyboard and BlueTooth Keyboard",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "description": "英数 をEscに変更",
+                    "from": {
+                        "key_code": "lang2"
+                    },
+                    "to": [
+                        {
+                            "key_code": "japanese_eisuu"
+                        },
+                        {
+                            "key_code": "escape"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "英数 を英数+Escに変更 for USB Keyboard",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "description": "英数 を英数+Escに変更",
+                    "from": {
+                        "key_code": "escape"
+                    },
+                    "to": [
+                        {
+                            "key_code": "japanese_eisuu"
+                        },
+                        {
+                            "key_code": "escape"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

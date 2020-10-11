@@ -1,6 +1,27 @@
 # overview
 Please input below commands.
 
+
+## karabiner
+install [karabiner](https://karabiner-elements.pqrs.org/)
+
+set my keybindings
+```zsh
+ln -s ~/dotfiles/karabiner/my_options.json ~/.config/karabiner/assets/complex_modifications/my_option.json
+```
+
+You may restart karabiner-elements in order to apply my_options.json
+
+apply my_optons.json settings to karabiner
+1. click karabiner icon like □ in toolber
+2. clicke "Preferences.."
+3. open Karabiner-Elements Preferences
+4. click "complex_modifications" tab
+5. click "Add rule" button
+6. click "+Enable" button to want to apply.
+
+
+
 # zsh
 ```zsh
 ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
@@ -14,14 +35,14 @@ ln -s ~/dotfiles/zsh/completion/_docker-compose ~/.zsh/completion/_docker-compos
 # vim
 
 
-スワップファイル,バックアップファイル,undoファイルの配置場所を指定
+assign path of swap, backup, undo files.
 ```zsh
 mkdir -p ~/.vim/swap
 mkdir -p ~/.vim/backup
 mkdir -p ~/.vim/undo
 ```
 
-.vimrc, gvimrcにシンボリックリンクを貼る
+make symbolic link of .vimrc, gvimrc
 ```zsh
 ln -s ~/dotfiles/vim/.gvimrc ~/.gvimrc
 ln -s ~/dotfiles/vim/.vimrc ~/.vimrc
