@@ -64,15 +64,17 @@
     "vim.normalModeKeyBindingsNonRecursive": [],
     // insert mode 時のキーバインド変更
     "vim.insertModeKeyBindings": [
-        {
-            "before": [
-                "j",
-                "j"
-            ],
-            "after": [
-                "Esc"
-            ]
-        },
+        // この設定を生かしておくと、jから始まる2バイト文字(e.g.時間)を
+        // 変換したときに 一つ前の文字をoverwriteしてしまう。
+        // {
+        //     "before": [
+        //         "j",
+        //         "j"
+        //     ],
+        //     "after": [
+        //         "Esc"
+        //     ]
+        // },
     ],
     // visual mode 時のキーバインド変更
     "vim.visualModeKeyBindings": [
@@ -127,6 +129,17 @@
     "extensions.autoUpdate": false,
     // general setting
     // --------------------------------------------------------------------
+    // --------------------------------------------------------------------
+    // general remote container setting
+    // リモートコンテナでも必ずinstallしたいVSCode拡張機能を記載
+    "remote.containers.defaultExtensions": [
+        "eamodio.gitlens"
+    ],
+    "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWxcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltdLFwiZm9ybWF0V2lkdGhcIjpcIjI0MFwiLFwiY3JlYXRlVGFyZ2V0XCI6ZmFsc2UsXCJwYWdlRm9ybWF0XCI6e1wieFwiOjAsXCJ5XCI6MCxcIndpZHRoXCI6ODI3LFwiaGVpZ2h0XCI6MTE2OX0sXCJzZWFyY2hcIjp0cnVlLFwic2hvd1N0YXJ0U2NyZWVuXCI6dHJ1ZSxcImdyaWRDb2xvclwiOlwiI2QwZDBkMFwiLFwiZGFya0dyaWRDb2xvclwiOlwiIzZlNmU2ZVwiLFwiYXV0b3NhdmVcIjp0cnVlLFwicmVzaXplSW1hZ2VzXCI6bnVsbCxcIm9wZW5Db3VudGVyXCI6MCxcInZlcnNpb25cIjoxOCxcInVuaXRcIjoxLFwiaXNSdWxlck9uXCI6ZmFsc2UsXCJ1aVwiOlwiXCJ9In0=",
+    "hediet.vscode-drawio.offline": false,
+    "sync.gist": "69a8d93980f8863136e645a3eead993e",
+    // general remote container setting
+    // --------------------------------------------------------------------
     "[shellscript]": {
         "editor.detectIndentation": false,
         "editor.tabSize": 4,
@@ -140,6 +153,62 @@
     // --------------------------------------------------------------------
     // Python setting
     // 基本的な管理方針として、Pythonの設定は、プロジェクトごとのsetting.jsonに記載する
-    // Python setting
+    // --------------------------------------------------------------------
+    "[ipynb]": {
+        // ipynbファイルで、一つのセルの縦幅を 400->600 に広げる
+        "python.dataScience.maxOutputSize": 600,
+    },
+    "[javascript]": {
+        "editor.detectIndentation": false
+    },
+    // --------------------------------------------------------------------
+    // markdown setting
+    "[markdown]": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": false,
+        "editor.quickSuggestionsDelay": 0,
+        // markdownは 行末の半角スペース2つで改行なので、消さないようにする
+        "files.trimTrailingWhitespace": false,
+        "editor.renderWhitespace": "boundary"
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    // markdown setting
+    // --------------------------------------------------------------------
+    // --------------------------------------------------------------------
+    // yaml setting
+    "[yaml]": {
+        "editor.tabSize": 4
+    },
+    "yaml.customTags": [
+        "!And",
+        "!And sequence",
+        "!If",
+        "!If sequence",
+        "!Not",
+        "!Not sequence",
+        "!Equals",
+        "!Equals sequence",
+        "!Or",
+        "!Or sequence",
+        "!FindInMap",
+        "!FindInMap sequence",
+        "!Base64",
+        "!Join",
+        "!Join sequence",
+        "!Cidr",
+        "!Ref",
+        "!Sub",
+        "!Sub sequence",
+        "!GetAtt",
+        "!GetAZs",
+        "!ImportValue",
+        "!ImportValue sequence",
+        "!Select",
+        "!Select sequence",
+        "!Split",
+        "!Split sequence"
+    ],
+    "yaml.validate": false,
+    // yaml setting
     // --------------------------------------------------------------------
 }
