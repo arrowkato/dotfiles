@@ -4,3 +4,4 @@
 - [The Usage navigate that create your Dictionary and use it.](https://proofdict.github.io/docs/usage.html)
 - [textlint-jaのリポジトリ一覧](https://github.com/textlint-ja)。プリセットが豊富に用意されている
 - [textlintで日本語の文章をチェックする](https://efcl.info/2015/09/10/introduce-textlint/)
+- [dotinstallの動画講座](https://dotinstall.com/lessons/basic_textlint)
