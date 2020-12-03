@@ -1,8 +1,199 @@
 version: 1
 rules:
+  # Engineering
+  - expected: Apache
+    specs:
+      - from: apache
+        to: Apache
+      - from: Apach
+        to: Apache
+      - from: apach
+        to: Apache
+  - expected: Mac
+    specs:
+      - from: mac
+        to: Mac
+      # MACアドレス をご返還するので登録しない
+      #- from: MAC
+      #  to: Mac
+  - expected: Linux
+    specs:
+      - from: linux
+        to: Linux
+      - from: LINUX
+        to: Linux
   - expected: jQuery
     specs:
       - from: jquery
         to: jQuery
       - from: ＪＱＵＥＲＹ
         to: jQuery
+  - expected: Python
+    specs:
+      - from: python
+        to: Python
+  - expected: Django
+    specs:
+      - from: django
+        to: Django
+      - from: Dango
+        to: Django
+      - from: jango
+        to: Django
+  - expected: Flask
+    specs:
+      - from: flask
+        to: Flask
+  - expected: Java
+    specs:
+      - from: java
+        to: Java
+      - from: JAVA
+        to: Java
+  - expected: GitHub
+    specs:
+      - from: github
+        to: GitHub
+      - from: Github
+        to: GitHub
+  - expected: MLOps
+    specs:
+      - from: mlops
+        to: MLOps
+      - from: Mlops
+        to: MLOps
+      - from: MLops
+        to: MLOps
+  - expected: MLflow
+    specs:
+      - from: mlflow
+        to: MLflow
+      - from: MLFlow
+        to: MLflow
+
+  - expected: Kubernetes
+    specs:
+      - from: kubernetes
+        to: Kubernetes
+      - from: kubarnetes
+        to: Kubernetes
+  - expected: Kubeflow
+    specs:
+      - from: kubeflow
+        to: Kubeflow
+      - from: KubeFlow
+        to: Kubeflow
+      - from: KUBEFLOW
+        to: Kubeflow
+  # Data Science
+  - expected: Jupyter Notebook
+    specs:
+      - from: jupyter notebook
+        to: Jupyter Notebook
+      - from: jupter notebook
+        to: Jupyter Notebook
+      - from: Jupyter notebook
+        to: Jupyter Notebook
+      - from: jupyter Notebook
+        to: Jupyter Notebook
+      - from: Jupter Notebook
+        to: Jupyter Notebook
+
+  - expected: ReLU
+    specs:
+      - from: relu
+        to: ReLU
+      - from: RELU
+        to: ReLU
+      - from: ReLu
+        to: ReLU
+  - expected: Attension
+    specs:
+      - from: Attention
+        to: Attension
+  - expected: TensorFlow
+    specs:
+      - from: tensorflow
+        to: TensorFlow
+      - from: Tensorflow
+        to: TensorFlow
+      - from: tensorFlow
+        to: TensorFlow
+  - expected: PyTorch
+    specs:
+      - from: pytorch
+        to: PyTorch
+      - from: Pytorch
+        to: PyTorch
+      - from: PYTORCH
+        to: PyTorch
+  - expected: scikit-learn
+    specs:
+      - from: Scikit-Learn
+        to: scikit-learn
+  - expected: scikit-learn
+    specs:
+      - from: Scikit-Learn
+        to: scikit-learn
+      - from: Scikit-learn
+        to: scikit-learn
+      - from: scikit-Learn
+        to: scikit-learn
+      - from: sk-learn
+        to: scikit-learn
+  - expected: NumPy
+    specs:
+      - from: numpy
+        to: NumPy
+      - from: Numpy
+        to: NumPy
+      - from: NUMPY
+        to: NumPy
+  - expected: AutoML
+    specs:
+      - from: automl
+        to: AutoML
+      - from: autoML
+        to: AutoML
+      - from: AUTOML
+        to: AutoML
+      - from: AutoMl
+        to: AutoML
+  - expected: 機械学習
+    specs:
+      - from: 機会学習
+        to: 機械学習
+  - expected: エンコーダー
+    specs:
+      - from: エンコーダ
+        to: エンコーダー
+  - expected: デコーダー
+    specs:
+      - from: デコーダ
+        to: デコーダー
+  - expected: データ
+    specs:
+      - from: データー
+        to: データ
+  - expected: PoC
+    specs:
+      - from: POC
+        to: PoC
+  # Common
+  - expected: Twitter
+    specs:
+      - from: twitter
+        to: Twitter
+      - from: twiter
+        to: Twitter
+      - from: Twiter
+        to: Twitter
+  - expected: Zenn
+    specs:
+      - from: zenn
+        to: Zenn
+
+  - expected: してみる
+    specs:
+      - from: して見る
+        to: してみる
