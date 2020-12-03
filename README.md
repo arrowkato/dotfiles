@@ -1,7 +1,6 @@
 # overview
 Please input below commands.
 
-
 ## karabiner
 install [karabiner](https://karabiner-elements.pqrs.org/)
 
@@ -33,7 +32,6 @@ ln -s ~/dotfiles/zsh/completion/_docker-compose ~/.zsh/completion/_docker-compos
 ```
 
 # vim
-
 
 assign path of swap, backup, undo files.
 ```zsh
@@ -122,4 +120,61 @@ how to use hadolint command
 hadolint <your_DOCKERFILE>
 ```
 
+## Using textlint
 
+I set up textlint each project.
+You can install textlint into global npm env too.
+
+install textlint
+```zsh
+cd <your project root dir>
+npm install --save-dev \
+    textlint \
+    textlint-rule-preset-ja-spacing \
+    textlint-rule-preset-ja-technical-writing \
+    textlint-rule-spellcheck-tech-word \
+    textlint-rule-preset-japanese
+```
+
+install prh: dictonary for textlint
+```zsh
+cd <your project root dir>
+npm install -g prh
+```
+
+download "your" .textlintrc and prh.yml
+or make sybolic links to your common them.
+
+download
+```zsh
+cd <your project root dir>
+# format
+curl -O <your .textlintrc url>
+# e.g  arrowkato's setting
+curl -O https://github.com/arrowkato/dotfiles/blob/master/textlint/.textlintrc
+
+# format
+curl -O <your prh.yml url>
+# e.g  arrowkato's setting
+curl -O https://github.com/arrowkato/dotfiles/blob/master/textlint/prh.yml
+```
+
+sybolic links
+```zsh
+cd <project root >
+
+# format
+ln -s <your common .textlintrc on your file system> .textlintrc
+# e.g  arrowkato's setting
+ln -s ~/dotfiles/textlint/.textlintrc .textlintrc
+
+# format
+ln -s <your common prh.yml on your file system> ./prh.yml
+# e.g  arrowkato's setting
+ln -s ~/dotfiles/textlint/prh.yml ./prh.yml
+```
+
+add .textlintrc and prh.yml to .gitignore, if you want.
+
+
+install VSCode extensions: [vscode-textlint](https://marketplace.visualstudio.com/items?itemName=taichi.vscode-textlint) and [prh - ProofReadingHelper](https://marketplace.visualstudio.com/items?itemName=vvakame.vscode-prh-extention)
