@@ -172,12 +172,14 @@
         "editor.renderWhitespace": "boundary"
     },
     "diffEditor.ignoreTrimWhitespace": false,
+    // 以下textlintの設定
+    "textlint.languages": [],
     // markdown setting
     // --------------------------------------------------------------------
     // --------------------------------------------------------------------
     // yaml setting
     "[yaml]": {
-        "editor.tabSize": 4
+        "editor.tabSize": 2
     },
     "yaml.customTags": [
         "!And",
@@ -209,6 +211,19 @@
         "!Split sequence"
     ],
     "yaml.validate": false,
+    "window.zoomLevel": 0,
+    "markdown.marp.themes": [
+        "./marp-themes/arrowkato.css"
+    ],
+    "shellcheck.executablePath": "/usr/local/bin/shellcheck",
+    "tabnine.experimentalAutoImports": true,
     // yaml setting
+    // --------------------------------------------------------------------
+    // --------------------------------------------------------------------
+    // JSON setting
+    "[json]": {
+        "editor.tabSize": 2
+    }
+    // JSON setting
     // --------------------------------------------------------------------
 }
