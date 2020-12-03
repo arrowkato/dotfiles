@@ -1,5 +1,4 @@
-## Comploetion configuration
-
+# completions configuration
 autoload -U compinit
 compinit
 
@@ -8,10 +7,8 @@ export PKG_CONFIG_PATH=/opt/local/lib/pkgconfig/
 # Pythonは3系がデフォルトで使われるようにする
 export PATH=/usr/local/opt/python/libexec/bin:$PATH
 
-
 # zshを開くごとにzsh_profileの読み込み
 source ~/.zsh_profile
-
 
 export LSCOLORS=gxfxcxdxbxegedabagacad
 export LS_COLORS='di=35:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
@@ -54,7 +51,7 @@ zshaddhistory() {
     [[     ${cmd} != (ls)
         && ${cmd} != (cd)
         && ${cmd} != (rm)
-     ]]
+    ]]
 }
 
 # 履歴ファイルに時刻を記録
@@ -159,6 +156,30 @@ eval "$(pyenv init -)"
 # starship の有効化 https://starship.rs/ja-jp/
 # 予め $brew install starship しておく必要あり
 eval "$(starship init zsh)"
+
+######################################################################
+# golang
+######################################################################
+export GOPATH=$(go env GOPATH)
+export PATH=$PATH:$GOPATH/bin
+
+# peco と ghq の設定
+# 事前に, brew install ghq  と brew install peco が必要
+# ctrl+] で $GOPATH 配下のディレクトリを検索
+bindkey '^]' peco-src
+function peco-src() {
+		local src=$(ghq list --full-path | peco --query "$LBUFFER")
+		if [ -n "$src" ]; then
+				BUFFER="cd $src"
+				zle accept-line
+		fi
+		zle -R -c
+}
+zle -N peco-src
+
+
+# zshを開くごとにzsh_profileの読み込み
+source ~/.zsh_profile
 
 ###########################################################
 # GCP関連
