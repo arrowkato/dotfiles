@@ -1,25 +1,101 @@
 {
-  "filters": {},
   "rules": {
-    "prh": {
-      "rulePaths":[
-        "./prh.yml"
-      ]
-    },
-    "preset-japanese": true
+    //"textlint-rule-preset-japanese": {},
+
     "preset-ja-spacing": {
+      // 半角文字と全角文字の間にスペースを入れるかどうかのルール デフォルトはスペースを入れない。
       "ja-nakaguro-or-halfwidth-space-between-katakana": true,
+      // インラインコードの周りにスペースを入れるかを決めるルール
       "ja-no-space-around-parentheses": true,
+      // 全角文字同士の間のスペースについてのtextlintルール。 全角文字どうしの間にスペースを入れません。
       "ja-no-space-between-full-width": true,
+      // カタカナ語間の区切り文字についてのtextlintルール。 カタカナ語間は中黒または半角スペースを用いてカタカナ語を区切ります。
       "ja-space-between-half-and-full-width": {
-        "space": "always",
-        "exceptPunctuation": "true"
+          "space": "always"
       },
-       "ja-space-after-exclamation": true,
-       "ja-space-after-question": true,
-       "ja-space-around-code": false,
+      // かっこの外側、内側ともにスペースを入れないようにするルール
+      "ja-space-after-exclamation": true,
+      // 文末に感嘆符を使用し、後に別の文が続く場合は、直後に全角スペースを挿入します。 文中に感嘆符を使用する場合はスペースを挿入しません
+      "ja-space-after-question": true,
+      // 文末に疑問符を使用し、後に別の文が続く場合は、直後に全角スペースを挿入します。 文中に疑問符を使用する場合はスペースを挿入しません。
+      "ja-space-around-code": false,
     },
-    "preset-ja-technical-writing": true,
-    "spellcheck-tech-word": true
+
+    // https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing
+    "textlint-rule-preset-ja-technical-writing":{
+      // 1文の長さは100文字以下とする
+      "sentence-length": {
+        max: 100
+      },
+      // カンマは1文中に3つまで
+      "max-comma": {
+        max: 3
+      },
+      // 読点は1文中に3つまで
+      "max-ten": {
+          max: 3
+      },
+      // 連続できる最大の漢字長は6文字まで
+      "max-kanji-continuous-len": {
+          max: 6
+      },
+      // 漢数字と算用数字を使い分けます
+      "arabic-kanji-numbers": true,
+      // 「ですます調」、「である調」を統一します
+      "no-mix-dearu-desumasu": {
+        // 見出しは自動
+        "preferInHeader": "",
+        // 本文はですます調
+        "preferInBody": "ですます",
+        // 箇条書きはである調
+        "preferInList": "である",
+        "strict": true
+      },
+      // 文末の句点記号として「。」を使います
+      "ja-no-mixed-period": {
+          "periodMark": "。"
+      },
+      // 二重否定は使用しない
+      "no-double-negative-ja": true,
+      // ら抜き言葉を使用しない
+      "no-dropping-the-ra": true,
+      // 逆接の接続助詞「が」を連続して使用しない
+      "no-doubled-conjunctive-particle-ga": true,
+      // 同じ接続詞を連続して使用しない
+      "no-doubled-conjunction": true,
+      // 同じ助詞を連続して使用しない
+      "no-doubled-joshi": {
+          "min_interval": 1
+      },
+      // UTF8-MAC 濁点を使用しない
+      "no-nfd": true,
+      // 不必要な制御文字を使用しない
+      "no-invalid-control-character": true,
+      // 感嘆符!！、感嘆符?？を使用しない
+      "no-exclamation-question-mark": false, // 使用する
+      // 半角カナを使用しない
+      "no-hankaku-kana": true,
+      // 弱い日本語表現の利用を使用しない
+      "ja-no-weak-phrase": true, // falseでもいいかもしれない
+      // 同一の単語を間違えて連続しているのをチェックする
+      "ja-no-successive-word": true,
+      // よくある日本語の誤用をチェックする
+      "ja-no-abusage": true,
+      // 冗長な表現をチェックする
+      "ja-no-redundant-expression": true,
+      // 入力ミスで発生する不自然なアルファベットをチェックする
+      "ja-unnatural-alphabet": true,
+      // 対になっていない括弧をチェックする
+      "no-unmatched-pair": false, // 別のプラグインで判定しているので不要
+    },
+    // https://github.com/azu/textlint-rule-spellcheck-tech-word
+    "textlint-rule-spellcheck-tech-word": true,
+    // 辞書(prh.yml)を作って外れている書き方を検出するツール
+    // https://github.com/prh/prh
+    "prh": {
+      "rulePaths": [
+        "prh.yml"
+      ]
+    }
   }
 }
