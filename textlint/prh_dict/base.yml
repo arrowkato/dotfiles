@@ -1,0 +1,7 @@
+version: 1
+imports:
+  - ./official/kanji-open.yml
+  - ./official/web+db.yml
+  - ./arrowkato/data-science.yml
+  - ./arrowkato/engineering.yml
+  - ./arrowkato/general.yml

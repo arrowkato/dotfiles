@@ -1,0 +1,28 @@
+rules:
+  - expected: Twitter
+    patterns:
+      - /twitter/i
+  - expected: Zenn
+    patterns:
+      - /zenn/i
+  - expected: Qiita
+    patterns:
+      - /qiita/i
+  - expected: Facebook
+    patterns:
+      - /facebook/i
+  - expected: Amazon
+    patterns:
+      - /amazon/i
+  - expected: Google
+    patterns:
+      - /google/i
+  - expected: Slack
+    patterns:
+      - /slack/i
+  - expected: Microsoft
+    patterns:
+      - /microsoft/i
+  - expected: Oracle
+    patterns:
+      - /oracle/i

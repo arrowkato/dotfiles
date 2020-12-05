@@ -1,17 +1,16 @@
 {
   "rules": {
-    //"textlint-rule-preset-japanese": {},
 
     "preset-ja-spacing": {
-      // 半角文字と全角文字の間にスペースを入れるかどうかのルール デフォルトはスペースを入れない。
-      "ja-nakaguro-or-halfwidth-space-between-katakana": true,
+      // 半角文字と全角文字の間にスペースを入れるかどうかのルール デフォルト(never)はスペースを入れない。
+      "ja-nakaguro-or-halfwidth-space-between-katakana": "never",
       // インラインコードの周りにスペースを入れるかを決めるルール
       "ja-no-space-around-parentheses": true,
       // 全角文字同士の間のスペースについてのtextlintルール。 全角文字どうしの間にスペースを入れません。
       "ja-no-space-between-full-width": true,
       // カタカナ語間の区切り文字についてのtextlintルール。 カタカナ語間は中黒または半角スペースを用いてカタカナ語を区切ります。
       "ja-space-between-half-and-full-width": {
-          "space": "always"
+          "space": "never"
       },
       // かっこの外側、内側ともにスペースを入れないようにするルール
       "ja-space-after-exclamation": true,
@@ -88,14 +87,14 @@
       // 対になっていない括弧をチェックする
       "no-unmatched-pair": false, // 別のプラグインで判定しているので不要
     },
-    // https://github.com/azu/textlint-rule-spellcheck-tech-word
-    "textlint-rule-spellcheck-tech-word": true,
+
     // 辞書(prh.yml)を作って外れている書き方を検出するツール
     // https://github.com/prh/prh
     "prh": {
       "rulePaths": [
-        "prh.yml"
+        "./.prh/base.yml"
       ]
-    }
+    },
+
   }
 }

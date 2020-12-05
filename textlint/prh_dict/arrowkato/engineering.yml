@@ -1,0 +1,68 @@
+# このファイルはインポートされる用のファイル。
+# なのでこのファイル、自体は他のファイルをimportしない方針
+# よく使う正規表現
+# /hoge/i のiはignore case \s*は空白文字を任意個
+# 例
+# /java\s*script/i
+# javascript, Javascript,JavaScript,java script, JAVA SCRIPT等がマッチする
+rules:
+  # Engineering
+  - expected: jQuery
+    patterns:
+    specs:
+      - from: jquery
+        to: jQuery
+      - from: ＪＱＵＥＲＹ
+        to: jQuery
+  - expected: JavaScript
+    patterns:
+      - /java\s*script/i
+  - expected: Apache
+    patterns:
+      - /apache/i
+      - /apach/i
+  - expected: Mac
+    patterns: mac
+  - expected: Linux
+    patterns:
+      - /linux/i
+  - expected: Python
+    patterns:
+      - /python/i
+  - expected: Django
+    patterns:
+      - /django/i
+      - /dango/i
+      - /jango/i
+  - expected: Java
+    patterns:
+      - /java/i
+  - expected: GitHub
+    patterns:
+      - /github/i
+  - expected: MLOps
+    patterns:
+      - /mlops/i
+  - expected: MLflow
+    patterns:
+      - /mlflow/i
+  - expected: Kubernetes
+    patterns:
+      - /kubernetes/i
+      - /kubarnetes/i
+      - /kubarnates/i
+  - expected: Kubeflow
+    patterns:
+      - /kubeflow/i
+  - expected: Flask
+    patterns:
+      - /flask/i
+  - expected: AWS
+    patterns:
+      - /aws/i
+  - expected: GCP
+    patterns:
+      - /gcp/i
+  - expected: Azure
+    patterns:
+      - /arzure/i

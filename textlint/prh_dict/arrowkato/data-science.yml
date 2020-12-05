@@ -1,0 +1,54 @@
+# このファイルはインポートされる用のファイル。
+# なのでこのファイル、自体は他のファイルをimportしない方針
+# よく使う正規表現
+# /hoge/i のiはignore case \s*は空白文字を任意個
+# 例
+# /java\s*script/i
+# javascript, Javascript,JavaScript,java script, JAVA SCRIPT等がマッチする
+rules:
+  # Data Science
+  - expected: Jupyter Notebook
+    patterns:
+      - /jupyter\s*notebook/i
+      - /jupter\s*notebook/i
+  - expected: ReLU
+    patterns:
+      - /relu/i
+  - expected: Attention
+    patterns:
+      - Attension
+  - expected: attention
+    patterns:
+      - attension
+  - expected: TensorFlow
+    patterns:
+      - /tensorflow/i
+  - expected: PyTorch
+    patterns:
+      - /pytorch/i
+  - expected: scikit-learn
+    patterns:
+      - /scikit-learn/i
+      - /sk-learn/i
+      - /sklearn/i
+  - expected: NumPy
+    patterns:
+      - /numpy/i
+  - expected: AutoML
+    patterns:
+      - /automl/i
+  - expected: 機械学習
+    patterns:
+      - 機会学習
+  - expected: PoC
+    patterns:
+      - /poc/i
+  - expected: エンコーダー
+    patterns:
+      - エンコーダ
+  - expected: デコーダー
+    patterns:
+      - デコーダ
+  - expected: データ
+    patterns:
+      - データー
