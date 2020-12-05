@@ -65,4 +65,7 @@ rules:
       - /gcp/i
   - expected: Azure
     patterns:
-      - /arzure/i
+      - /azure/i
+  - expected: source
+    patterns:
+      - sorce
