@@ -137,15 +137,14 @@ install textlint-rule package
 cd <your project root dir>
 npm install --save-dev \
     textlint-rule-preset-ja-spacing \
-    textlint-rule-preset-ja-technical-writing \
-    textlint-rule-spellcheck-tech-word 
+    textlint-rule-preset-ja-technical-writing
 ```
 
 
 install prh: dictonary for textlint
 ```zsh
 cd <your project root dir>
-npm install -g prh
+npm install --save-dev prh
 ```
 
 download "your" .textlintrc and prh.yml
@@ -160,9 +159,9 @@ curl -O <your .textlintrc url>
 curl -O https://github.com/arrowkato/dotfiles/blob/master/textlint/.textlintrc
 
 # format
-curl -O <your prh.yml url>
+curl -O <your dictonary files of prh url>
 # e.g  arrowkato's setting
-curl -O https://github.com/arrowkato/dotfiles/blob/master/textlint/prh.yml
+curl -O https://github.com/arrowkato/dotfiles/tree/master/textlint/prh_dict
 ```
 
 sybolic links
@@ -175,12 +174,21 @@ ln -s <your common .textlintrc on your file system> .textlintrc
 ln -s ~/dotfiles/textlint/.textlintrc .textlintrc
 
 # format
-ln -s <your common prh.yml on your file system> ./prh.yml
+ln -s <your common prh.yml on your file system> .prh
 # e.g  arrowkato's setting
-ln -s ~/dotfiles/textlint/prh.yml ./prh.yml
+ln -s ~/dotfiles/textlint/prh_dict .prh
 ```
 
 add .textlintrc and prh.yml to .gitignore, if you want.
 
 
 install VSCode extensions: [vscode-textlint](https://marketplace.visualstudio.com/items?itemName=taichi.vscode-textlint) and [prh - ProofReadingHelper](https://marketplace.visualstudio.com/items?itemName=vvakame.vscode-prh-extention)
+
+add below setting to your settings.json of VSCode
+```json
+    "prh.configFiles": [
+        "./.prh/base.yml",
+    ]
+```
+This path means relative path from each VSCode project root directory.
+You can use absolute paths too.
