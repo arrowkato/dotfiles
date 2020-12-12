@@ -54,6 +54,12 @@ rules:
   - expected: Kubeflow
     patterns:
       - /kubeflow/i
+  - expected: Luigi
+    patterns:
+      - /luigi/i
+  - expected: Argo
+    patterns:
+      - /argo/i
   - expected: Flask
     patterns:
       - /flask/i
@@ -69,3 +75,13 @@ rules:
   - expected: source
     patterns:
       - sorce
+  - expected: PyCoral
+    patterns:
+      - /pycoral/i
+  - expected: OpenCV
+    patterns:
+      - /opencv/i
+  - expected: Kubeflow Pipelines
+    patterns:
+      - /kubeflow\s*pipelines/i
+      - /kubeflow\s*pipeline/i

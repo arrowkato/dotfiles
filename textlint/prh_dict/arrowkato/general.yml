@@ -26,3 +26,9 @@ rules:
   - expected: Oracle
     patterns:
       - /oracle/i
+  - expected: pipeline
+    patterns:
+      - pipline
+  - expected: Pipeline
+    patterns:
+      - Pipline

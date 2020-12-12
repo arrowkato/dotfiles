@@ -37,6 +37,10 @@ rules:
   - expected: AutoML
     patterns:
       - /automl/i
+  - expected: MobileNet
+    patterns:
+      - /mobilenet/i
+      - /mobile_net/i
   - expected: 機械学習
     patterns:
       - 機会学習
